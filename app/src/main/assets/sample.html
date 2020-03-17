@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My first leaflet webviewer</title>
+    <!--Load leaflet -->
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+    <!--Load vectorGrid plugin for Leaflet -->
+    <script src="https://unpkg.com/leaflet.vectorgrid@latest/dist/Leaflet.VectorGrid.bundled.js"></script>
+    <!--Load the style stylesheet of leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+
+    <style>
+  /*Set the dimensions of our map  */
+    .map {
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+
+</head>
+<body>
+<!--Create our map object  -->
+<div id="map" class="map">
+</div>
+<input type="file" id="inputFileToLoad" align="center" accept=".jpg,.jpeg,.png" onclick="fileClicked(event)" onchange="fileChanged(event);setFile(this);" width="48"/>
+</body>
+</html>
